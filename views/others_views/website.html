@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/styleDinamics.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <title>Videos</title>
+
+    <style>
+        .body-website {
+            background-color: #333;
+            height: 100vh;
+        }
+
+        #container-custom {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+            height: auto;
+            /* Cambié a auto para permitir la expansión */
+            padding: 20px;
+            /* Añadí un poco de espacio interno */
+            border-radius: 8px;
+            /* Bordes redondeados para un mejor diseño */
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Estilo General */
+        .video-card-website {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+            margin: 15px;
+            /* Margen para separación */
+        }
+
+        .video-card-website:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 150px;
+        }
+
+        .title.is-5 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        .video-description-website {
+            color: #3273dc;
+            margin-top: 0.5rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        #no_videos {
+            color: #3273dc;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            /* Aumenté el tamaño del texto */
+        }
+
+        /* Estilo de botones de categorías */
+        .button.is-light {
+            margin: 0 10px;
+            /* Espacio entre botones */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Efecto al pasar el mouse */
+        }
+
+        .button.is-light:hover {
+            background-color: #3273dc;
+            /* Color de fondo al pasar el mouse */
+            color: white;
+            /* Color del texto al pasar el mouse */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .columns.is-multiline .column {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .columns.is-multiline .column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="body-website">
+    <div class="container" id="container-custom">
+        <div class="has-text-centered">
+            <h2 class="title is-3">Videos</h2>
+        </div>
+        <br>
+        <div class="buttons is-centered" id="category-buttons"></div>
+
+        <div class="columns is-multiline" id="videos-container"></div>
+
+        <div class="has-text-centered">
+            <a href="/index.html" class="button is-primary">Go to Welcome Page</a>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cargar el JSON y generar categorías y videos
+            fetch('/data/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const categories = [
+                        { key: 'videos_youtube_javaNetbeans', label: 'Java NetBeans' },
+                        { key: 'videos_youtube_psint', label: 'PseInt' },
+                        { key: 'videos_youtube_ejercicios_bd', label: 'Ejercicios BD' },
+                    ];
+
+                    const categoryButtons = document.getElementById('category-buttons');
+                    categories.forEach(category => {
+                        const button = document.createElement('button');
+                        button.className = 'button is-light';
+                        button.textContent = category.label;
+                        button.setAttribute('data-category', category.key);
+                        categoryButtons.appendChild(button);
+                    });
+
+                    // Cargar videos de la categoría seleccionada
+                    function loadVideos(categoryKey) {
+                        const videos = data[categoryKey] || [];
+                        const videosContainer = document.getElementById('videos-container');
+                        videosContainer.innerHTML = '';
+
+                        if (videos.length === 0) {
+                            videosContainer.innerHTML = `<p id="no_videos">No videos available.</p>`;
+                            return;
+                        }
+
+                        videos.forEach(video => {
+                            const column = document.createElement('div');
+                            column.className = 'column is-one-quarter';
+                            column.innerHTML = `
+                                <a href="${video.link || '#'}" class="card video-card-website">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="${video.imagen}" alt="${video.nombre}">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="title-wrapper">
+                                            <p class="title is-5">${video.nombre}</p>
+                                        </div>
+                                        ${video.link ? `<div class="description-wrapper"><p class="subtitle is-6 video-description-website">Watch on YouTube</p></div>` : ''}
+                                    </div>
+                                </a>
+                            `;
+                            videosContainer.appendChild(column);
+                        });
+                    }
+
+                    // Manejar la selección de categorías
+                    categoryButtons.addEventListener('click', (event) => {
+                        if (event.target.tagName === 'BUTTON') {
+                            const categoryKey = event.target.getAttribute('data-category');
+                            loadVideos(categoryKey);
+                        }
+                    });
+
+                    // Cargar videos de la categoría predeterminada
+                    loadVideos(categories[0].key);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+
+</html>

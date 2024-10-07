@@ -1,0 +1,186 @@
+{
+    "videos_youtube_javaNetbeans": [
+        {
+            "nombre": "Ejercicio Java: Calcular-Promedio |Practica-1|",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-1.png",
+            "link": "https://youtu.be/rNwJoeMjkME"
+        },
+        {
+            "nombre": "Ejercicio Java: Calcular Área y Perímetro de un Rectángulo |Practica - 2|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-2.png",
+            "link": "https://youtu.be/rNwJoeMjkME"
+        },
+        {
+            "nombre": "Ejercicio Java: Calcular el área de un círculo |Practica-3|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-3.png",
+            "link": "https://youtu.be/4oBtWIg9m1o"
+        },
+        {
+            "nombre": "Ejercicio Java: Calcular el área de un triángulo |Practica-4|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-4.png",
+            "link": "https://youtu.be/NGN0GFRlhZ4"
+        },
+        {
+            "nombre": "Ejercicio Java: Calcular el factorial de un número |Practica-5|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-5.png",
+            "link": "https://youtu.be/EthK3BfAa6g"
+        },
+        {
+            "nombre": "Ejercicio Java: Ordenar un array de números |Practica-6|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-6.png",
+            "link": "https://youtu.be/qgJhdzQemrE"
+        },
+        {
+            "nombre": "Ejercicio Java: Crear una calculadora simple |Practica-7|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-7.png",
+            "link": "https://youtu.be/3u06TFn9yew"
+        },
+        {
+            "nombre": "Ejercicio Java: Implementar una lista enlazada |Practica-8|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-8.png",
+            "link": "https://youtu.be/sGkURtiUkBY"
+        },
+        {
+            "nombre": "Ejercicio Java: Generar números primos |Practica-9|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-9.png",
+            "link": "https://youtu.be/Se4wBBfWijM"
+        },
+        {
+            "nombre": "Ejercicio Java: Realizar un juego de adivinanza |Practica-10|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-10.png",
+            "link": "https://youtu.be/D8KzqlRlxFk"
+        },
+        {
+            "nombre": "Ejercicio Java: Manejar excepciones try-catch |Practica-11|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-11.png",
+            "link": "https://youtu.be/9zIMW8Zwz4c"
+        },
+        {
+            "nombre": "Ejercicio Java: Crear una aplicación de agenda |Practica-12|",
+            "imagen": "/resources/images/java-netbeans/img-ejer-12.png",
+            "link": "https://youtu.be/z9Yrckuym0o"
+        }
+    ],
+    "videos_youtube_psint": [
+        {
+            "nombre": "Ejercicios Básicos con PseInt | 4 Ejercicios |",
+            "imagen": "/resources/images/psint/img-ejer-1.png",
+            "link": "https://youtu.be/z9Yrckuym0o"
+        },
+        {
+            "nombre": "Ejercicios Básicos con PseInt | 4 Ejercicios |",
+            "imagen": "/resources/images/psint/img-ejer-1.png",
+            "link": "https://youtu.be/xkJjYG708mc"
+        }
+    ],
+    "videos_youtube_ejercicios_bd": [
+        {
+            "nombre": "Instalación de MySQL",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-1.png",
+            "link": "https://youtu.be/W5Kzd5GwKmU"
+        },
+        {
+            "nombre": "Carga y Descarga de Datos entre 2 SGBD",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-2.png",
+            "link": "https://youtu.be/NqTd6QvjYdM"
+        },
+        {
+            "nombre": "Como instalar Oracle 12c paso a paso !!!",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-3.png",
+            "link": "https://youtu.be/acTIOt5y7wU"
+        },
+        {
+            "nombre": "Instalación Windows Server 2012",
+            "imagen": "/resources/images/redes/img-video-1.png",
+            "link": "https://youtu.be/wNVO28JwmXg"
+        }
+    ],
+    "proyectos_personales": [
+        {
+            "nombre": "Mi Portafolio",
+            "imagen": "/resources/images/previews-projects/preview-my-portafoly.png",
+            "descripcion": "A personal website where I present my work experience, personal projects and direct links to my YouTube videos.",
+            "url": "https://docs.google.com/presentation/d/1EdqXB2k0pUh452Kn1uDuAkQ4GAie-Dol/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Bulma",
+                "Laravel"
+            ]
+        },
+        {
+            "nombre": "Liga de Fútbol",
+            "imagen": "/resources/images/previews-projects/preview-sistema-futbol.png",
+            "descripcion": "An application that generates random matches, calculates the standings based on the results of each match, and allows the management of players, teams and coaches.",
+            "url": "#",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "MySQL",
+                "PHP",
+                "JavaScript"
+            ],
+            "funcionalidades": [
+                "Match generation",
+                "League table calculation",
+                "Player and team management"
+            ]
+        },
+        {
+            "nombre": "Página Web de Matrimonio",
+            "imagen": "/resources/images/previews-projects/preview-sitio-matrimonio.png",
+            "descripcion": "A platform where users can register to search for marriages. The administrator can manage the registrations and change the marital status of the users.",
+            "url": "https://docs.google.com/presentation/d/15CGKSk_8dn81vj-E5zs2PW5S3L7J7SHN/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "PHP",
+                "Laravel",
+                "Bulma",
+                "MySQL"
+            ],
+            "funcionalidades": [
+                "User registration",
+                "Administrator management of marital status",
+                "Administrator login"
+            ]
+        },
+        {
+            "nombre": "Página Web de Sitio de Taxis",
+            "imagen": "/resources/images/previews-projects/preview-sitio-taxis.png",
+            "descripcion": "A website where there are only functions for the administrator, a CRUD to manage the working staff within the company.",
+            "url": "https://docs.google.com/presentation/d/1C0K1yPx-YboC5a_ud9w-hiSm3iqCgQVQ/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Laravel",
+                "Bulma",
+                "MySQL"
+            ],
+            "funcionalidades": [
+                "Personnel Management",
+                "Administrator Login"
+            ]
+        },
+        {
+            "nombre": "Página Web de Cofee (FrontEnd)",
+            "imagen": "/resources/images/previews-projects/preview-sistema-coffe.png",
+            "descripcion": "A site that has pure design",
+            "url": "#",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "PHP"
+            ],
+            "funcionalidades": [
+                "User registration",
+                "Administrator management of marital status",
+                "Administrator login"
+            ]
+        }
+    ]
+}

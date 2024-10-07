@@ -1,0 +1,234 @@
+.s {
+    background-color: rgb(20, 22, 26);
+    height: 100%;
+}
+
+.box-general-index {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    background-color: rgb(20, 22, 26);
+    margin: 0 auto;
+}
+
+.box-general {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+
+    background-color: rgb(20, 22, 26);
+}
+
+.box-general-index>div {
+    flex: 1;
+    min-width: 250px;
+
+    background-color: rgb(20, 22, 26);
+}
+
+.card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card-content {
+    flex: 1;
+    margin: 0 auto;
+}
+
+.box-footer-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+.box-sponsor-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.box-sponsor-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-sponsor-footer img {
+    max-width: 100px;
+    /* Ajusta el tamaño máximo de las imágenes si es necesario */
+}
+
+.box-sponsor-footer,
+.box-version-footer {
+    text-align: center;
+    color: aliceblue;
+}
+
+/* STYLES VIEW ABOUTME */
+/* Agrega tus estilos aquí */
+.body-aboutme {
+    font-family: 'Arial', sans-serif;
+
+    background-color: rgb(20, 22, 26);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box-card-aboutme {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 80%;
+    width: 100%;
+}
+
+.profile-aboutme {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile_header-aboutme {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile_highlight_wrapper-aboutme {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #ffcc00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.profile_avatar-aboutme img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile_name-aboutme h2 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_name-aboutme img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.profile_name-aboutme p {
+    margin: 0;
+    color: #777;
+}
+
+.social-links-aboutme {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links-aboutme li {
+    display: inline;
+}
+
+.social-links-aboutme a {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links-aboutme a:hover {
+    color: #0073b1;
+    /* color específico para LinkedIn */
+}
+
+.tabs-wrapper-aboutme {
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tabs-aboutme {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabs-aboutme li {
+    flex: 1;
+}
+
+.tabs-aboutme a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs-aboutme a:hover {
+    background-color: #ddd;
+}
+
+.active-aboutme a {
+    background-color: #0073b1;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.tab-content-aboutme--active {
+    display: block;
+}
+
+.profile_footer-aboutme {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.profile_action-aboutme .button {
+    background-color: #0073b1;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile_action-aboutme .button:hover {
+    background-color: #005f8d;
+}
