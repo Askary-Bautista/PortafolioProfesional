@@ -100,7 +100,7 @@
             "nombre": "Mi Portafolio",
             "imagen": "/resources/images/previews-projects/preview-my-portafoly.png",
             "descripcion": "A personal website where I present my work experience, personal projects and direct links to my YouTube videos.",
-            "url": "https://docs.google.com/presentation/d/1EdqXB2k0pUh452Kn1uDuAkQ4GAie-Dol/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
+            "url": "https://portafolio-profesional-kappa.vercel.app/",
             "tecnologias": [
                 "HTML",
                 "CSS",
@@ -131,7 +131,7 @@
             "nombre": "Página Web de Matrimonio",
             "imagen": "/resources/images/previews-projects/preview-sitio-matrimonio.png",
             "descripcion": "A platform where users can register to search for marriages. The administrator can manage the registrations and change the marital status of the users.",
-            "url": "https://docs.google.com/presentation/d/15CGKSk_8dn81vj-E5zs2PW5S3L7J7SHN/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
+            "url": "https://web-matrimonio.vercel.app/",
             "tecnologias": [
                 "HTML",
                 "CSS",
