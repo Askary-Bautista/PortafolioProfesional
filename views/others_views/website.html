@@ -96,6 +96,7 @@
             /* Espacio entre botones */
             transition: background-color 0.3s ease, color 0.3s ease;
             /* Efecto al pasar el mouse */
+            border: solid 1px #3273dc;
         }
 
         .button.is-light:hover {
@@ -155,6 +156,7 @@
                     categories.forEach(category => {
                         const button = document.createElement('button');
                         button.className = 'button is-light';
+                        button.id='btnVideos';
                         button.textContent = category.label;
                         button.setAttribute('data-category', category.key);
                         categoryButtons.appendChild(button);

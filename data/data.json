@@ -95,9 +95,31 @@
             "link": "https://youtu.be/wNVO28JwmXg"
         }
     ],
+    "videos_youtube_jquery": [
+        {
+            "nombre": "Seleccion de Elementos",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-1.png",
+            "link": "https://youtu.be/kVy4C74wLAM"
+        },
+        {
+            "nombre": "Carga y Descarga de Datos entre 2 SGBD",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-2.png",
+            "link": "https://youtu.be/NqTd6QvjYdM"
+        },
+        {
+            "nombre": "Como instalar Oracle 12c paso a paso !!!",
+            "imagen": "/resources/images/ejercicios-bd/img-ejer-3.png",
+            "link": "https://youtu.be/acTIOt5y7wU"
+        },
+        {
+            "nombre": "Instalación Windows Server 2012",
+            "imagen": "/resources/images/redes/img-video-1.png",
+            "link": "https://youtu.be/wNVO28JwmXg"
+        }
+    ],
     "proyectos_personales": [
         {
-            "nombre": "Mi Portafolio",
+            "nombre": "Professional Portfolio",
             "imagen": "/resources/images/previews-projects/preview-my-portafoly.png",
             "descripcion": "A personal website where I present my work experience, personal projects and direct links to my YouTube videos.",
             "url": "https://portafolio-profesional-kappa.vercel.app/",
@@ -110,7 +132,7 @@
             ]
         },
         {
-            "nombre": "Liga de Fútbol",
+            "nombre": "Football League",
             "imagen": "/resources/images/previews-projects/preview-sistema-futbol.png",
             "descripcion": "An application that generates random matches, calculates the standings based on the results of each match, and allows the management of players, teams and coaches.",
             "url": "#",
@@ -128,7 +150,7 @@
             ]
         },
         {
-            "nombre": "Página Web de Matrimonio",
+            "nombre": "Wedding Website",
             "imagen": "/resources/images/previews-projects/preview-sitio-matrimonio.png",
             "descripcion": "A platform where users can register to search for marriages. The administrator can manage the registrations and change the marital status of the users.",
             "url": "https://web-matrimonio.vercel.app/",
@@ -148,7 +170,7 @@
             ]
         },
         {
-            "nombre": "Página Web de Sitio de Taxis",
+            "nombre": "Taxi Service Website",
             "imagen": "/resources/images/previews-projects/preview-sitio-taxis.png",
             "descripcion": "A website where there are only functions for the administrator, a CRUD to manage the working staff within the company.",
             "url": "https://docs.google.com/presentation/d/1C0K1yPx-YboC5a_ud9w-hiSm3iqCgQVQ/edit?usp=sharing&ouid=112142318347319781110&rtpof=true&sd=true",
@@ -166,7 +188,7 @@
             ]
         },
         {
-            "nombre": "Página Web de Cofee (FrontEnd)",
+            "nombre": "Coffee Shop Website (FrontEnd)",
             "imagen": "/resources/images/previews-projects/preview-sistema-coffe.png",
             "descripcion": "A site that has pure design",
             "url": "#",
