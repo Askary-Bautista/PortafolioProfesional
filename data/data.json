@@ -191,7 +191,7 @@
             "nombre": "Coffee Shop Website (FrontEnd)",
             "imagen": "/resources/images/previews-projects/preview-sistema-coffe.png",
             "descripcion": "A site that has pure design",
-            "url": "#",
+            "url": "https://coffee-simple-zeta.vercel.app/",
             "tecnologias": [
                 "HTML",
                 "CSS",

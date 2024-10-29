@@ -38,8 +38,7 @@
         }
 
 
-        .presentation-text,
-        .developer-text {
+        .presentation-text {
             font-size: 3em;
             font-weight: bold;
             white-space: nowrap;
@@ -49,6 +48,15 @@
             animation: caret 1s steps(1) infinite;
         }
 
+        
+        .developer-text{
+            font-size: 3em;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            color: rgb(0, 209, 178);
+            animation: caret 1s steps(1) infinite;
+        }
         @keyframes caret {
             50% {
                 border-color: transparent;
@@ -87,7 +95,7 @@
                 <section class="section">
                     <div class="container">
                         <h1 id="presentationText" class="presentation-text"></h1>
-                        <h2 id="developerText" class="developer-text"></h2>
+                        <h2 id="developerText" class="developer-text">Software Developer</h2>
                     </div>
                 </section>
             </div>
@@ -178,11 +186,17 @@
                         <a href="https://www.flaticon.es/" target="_blank" rel="noopener noreferrer"><img
                                 src="./resources/images/iconos/flaticon.png" alt="Flaticon"></a>
                     </div>
+
+                    <div class="box-version-footer">
+                        <a href="https://uiverse.io/" target="_blank" rel="noopener noreferrer"><img
+                            src="./resources/images/iconos/uiverse.ico" alt="UI"></a>
+                    </div>
                 </div>
 
                 <div class="box-version-footer">
                     Laravel v10.48.17 (PHP v8.1.26)
                 </div>
+                
             </div>
         </div>
     </div>
@@ -190,7 +204,7 @@
     <script>
         const presentationText = document.getElementById('presentationText');
         const developerText = document.getElementById('developerText');
-        const texts = ['I am Askary Bautista', 'Software Developer'];
+        const texts = ['I am Askary Bautista'];
 
         let charIndex = 0;
         let textIndex = 0;

@@ -5,20 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/styleDinamics.css">
-
-    <!-- Link to Bootstrap CSS file -->
+    <link rel="stylesheet" href="/resources/css/styleDinamics.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Link to Bulma's CSS file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma-rtl.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Projects</title>
     <style>
-        /* Tu CSS copiado del código original */
-
+        /* CSS anterior y ajustes de botón */
         #container-custom {
             padding: 1rem;
             background-color: #f9f9f9;
@@ -33,60 +26,51 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            position: relative;
+            /* Habilita el uso de posición absoluta para los hijos */
         }
+
 
         .project-card-website:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(44, 55, 47, 0.463);
         }
 
         .card-image {
             flex-grow: 1;
         }
 
-        #container-card-projects {
-            height: 100%;
-            display: grid;
-            grid-template-rows: auto 1fr;
+        .view-more-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
         }
-
-        .card-content {
-            height: 100%;
-        }
-
-        .card-content-wrapper {
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        .title-wrapper p {
-            color: #3273dc;
-        }
-
-        .technologies-wrapper,
-        .features-wrapper {
-            margin-top: 0.5rem;
+        
+        .view-more-btn:hover {
+            background-color: beige;
             color: #4a4a4a;
+            box-shadow: 0 10px 20px rgba(44, 55, 47, 0.578);
         }
-
-        .button.is-primary {
-            background-color: #3273dc;
-            border-color: #3273dc;
-        }
-
-        .button.is-primary:hover {
-            background-color: #275a9e;
-            border-color: #275a9e;
-        }
-
-        .column {
+        
+        .project-card-website:hover .view-more-btn {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            opacity: 1;
         }
+        .card-image:hover .view-more-btn {
+            display: flex;
+            opacity: 1;
+        }
+        
     </style>
 </head>
 
@@ -94,18 +78,10 @@
     <div class="container" id="container-custom">
         <div class="section">
             <div class="has-text-centered section-header">
-                <div>
-                    <h2 class="title is-3 has-text-primary">Projects</h2>
-                </div>
-                <div>
-                    <p class="subtitle is-5 has-text-grey">Explore my personal projects</p>
-                </div>
+                <h2 class="title is-3 has-text-primary">Projects</h2>
+                <p class="subtitle is-5 has-text-grey">Explore my personal projects</p>
             </div>
-
-            <div class="columns is-multiline" id="projects-container">
-
-            </div>
-
+            <div class="columns is-multiline" id="projects-container"></div>
             <div class="has-text-centered">
                 <a href="/index.html" class="button is-primary">Go to Welcome Page</a>
             </div>
@@ -114,79 +90,71 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Obtener el contenedor donde se van a agregar las tarjetas
             const projectsContainer = document.getElementById('projects-container');
-
-            // Cargar el archivo JSON de proyectos personales
             fetch('/data/data.json')
                 .then(response => response.json())
                 .then(data => {
                     const projects = data.proyectos_personales;
                     projects.forEach(project => {
-                        // Crear los elementos HTML para cada proyecto
                         const column = document.createElement('div');
                         column.classList.add('column', 'is-one-quarter');
-
                         const card = document.createElement('a');
                         card.classList.add('card', 'project-card-website');
                         card.href = project.url || '#';
 
                         const cardImage = document.createElement('div');
                         cardImage.classList.add('card-image');
-
                         const figure = document.createElement('figure');
                         figure.classList.add('image', 'is-4by3');
-
                         const img = document.createElement('img');
                         img.src = project.imagen;
                         img.alt = project.nombre;
-
                         figure.appendChild(img);
                         cardImage.appendChild(figure);
 
+
+
                         const cardContent = document.createElement('div');
                         cardContent.classList.add('card-content');
-
                         const titleWrapper = document.createElement('div');
                         titleWrapper.classList.add('title-wrapper');
-
                         const title = document.createElement('p');
                         title.classList.add('title', 'is-5');
                         title.textContent = project.nombre;
-
                         titleWrapper.appendChild(title);
 
                         const descriptionWrapper = document.createElement('div');
                         descriptionWrapper.classList.add('description-wrapper');
-
                         const description = document.createElement('p');
                         description.classList.add('subtitle', 'is-6');
                         description.textContent = project.descripcion;
-
                         descriptionWrapper.appendChild(description);
 
                         const technologiesWrapper = document.createElement('div');
                         technologiesWrapper.classList.add('technologies-wrapper');
-
                         const technologies = document.createElement('p');
                         technologies.classList.add('subtitle', 'is-7');
                         technologies.textContent = 'Technologies: ' + project.tecnologias.join(', ');
-
                         technologiesWrapper.appendChild(technologies);
+
+                        // Agregar el botón "View More"
+                        const btnView = document.createElement('button');
+                        btnView.classList.add('view-more-btn');
+                        btnView.id = 'btnView';
+                        btnView.innerHTML = '<span>Play the Video</span>';
+                        cardImage.appendChild(btnView); // Cambiado de cardContent a cardImage
 
                         cardContent.appendChild(titleWrapper);
                         cardContent.appendChild(descriptionWrapper);
                         cardContent.appendChild(technologiesWrapper);
 
-                        // Si el proyecto tiene funcionalidades
+
                         if (project.funcionalidades) {
                             const featuresWrapper = document.createElement('div');
                             featuresWrapper.classList.add('features-wrapper');
-
                             const features = document.createElement('p');
                             features.classList.add('subtitle', 'is-7');
                             features.textContent = 'Features: ' + project.funcionalidades.join(', ');
-
                             featuresWrapper.appendChild(features);
                             cardContent.appendChild(featuresWrapper);
                         }
@@ -194,17 +162,12 @@
                         card.appendChild(cardImage);
                         card.appendChild(cardContent);
                         column.appendChild(card);
-
-                        // Agregar la tarjeta al contenedor
                         projectsContainer.appendChild(column);
                     });
                 })
                 .catch(error => console.error('Error loading projects:', error));
         });
     </script>
-    <!-- Links to Bootstrap JavaScript files and the Popper.js JavaScript library -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
